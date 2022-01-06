@@ -26,7 +26,7 @@ $nama_belakang ="Budiman";
 	 <!-- for -->
 	 <p>
 		<?php 
-			for( $i = 0; $i < 5; $i++){
+			for( $i = 5; $i < 5; $i++){
 				echo "Hellow <br>";
 			}
 		?>
@@ -34,7 +34,7 @@ $nama_belakang ="Budiman";
 	 </p>
 
 <!-- while -->
-	 <p>
+	 <p>while <br>
 		<?php 
 			$i = 0;
 			while( $i < 5){
@@ -45,9 +45,9 @@ $nama_belakang ="Budiman";
 
 	 </p>
 
-	 <p>
+	 <p>do while <br>
 		 <?php 
-		 $i=0;
+		 $i=10;
 		 do {
 			 echo "Hello world <br>";
 		$i++;
@@ -58,12 +58,103 @@ $nama_belakang ="Budiman";
  <br>
  <br>
 
+
+ <table border="1" cellpading="1" cellspacing="0">
+		 <?php 
+		 	$i=1;
+			while($i<=3){
+				echo "<tr>";
+				$j=1;
+				while($j<=5){
+					echo "<td>$i, $j </td>";		
+					$j++;
+				}
+				echo "</tr>";
+				$i++;
+			}
+			
+		 ?>
+	</table>
+	<br>
+
+
+<p>while</p>
+<table border="1" cellpadding="1" cellspacing="0">
+			<?php $i=1; 
+			while($i<=3) { ?>
+				<tr>
+					<?php $j=1; 
+					while($j<=5){ ?>
+						<td> <?php echo "$i, $j";?></td>
+						
+					<?php $j++;} ?>
+					
+				</tr>
+				
+			<?php $i++;} ?>
+</table>
+
+	<br>
+	<table border="1" cellpading="1" cellspacing="0">
+	<?php 
+		$i=1;
+		do {
+			echo "<tr>";
+			$j=1;
+			do{
+				echo "<td> $i, $j</td>";
+				$j++;
+				}while($j<=5);
+			
+		echo"</tr>";
+	  	$i++;
+		
+		}while ($i <=10);
+		
+		
+		
+	?>
+
+	</table>
+<br>
+
+
+<p>tabel do while</p>
+	<table border="1" cellpadding="1" cellspacing="0">
+			<?php 
+			 $i=1;
+			 do{ ?>
+			
+			 <?php  ?>
+				<?php if($i % 2 == 1) : ?>
+				<tr class="warna_baris">
+				<?php else :  ?>
+					<tr>
+				<?php endif; ?>
+					<?php 
+					$j=1;
+					do{ ?>
+					<td> <?php echo "$i, $j"; ?></td>
+					<?php $j++;}while($j<=5); ?>
+				</tr>
+				 
+			 <?php $i++; }while($i<=10); ?>
+			 
+
+	</table>
+	<br>
+
+
 	 <table border="1", cellpading="10" cellspacing="0">
 		 <!-- <tr>
 			 <td>1,1</td>
 			 <td>1,2</td>
 			 <td>1,3</td>
 		</tr> -->
+
+
+		
+		
 		<?php
 			for($i=1; $i<=3; $i++){
 				echo "<tr>";
@@ -76,6 +167,8 @@ $nama_belakang ="Budiman";
 		
 	</table>
 		&ensp;
+
+	<p>Warna Tabel For</p>
 	 <table border="1", cellpading="10" cellspacing="0">
 			<?php 
 					for($i=1; $i <=5; $i++): ?>
