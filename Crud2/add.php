@@ -1,14 +1,21 @@
 <?php 
+session_start();
+if ( !isset($_SESSION["login"])){
+   header("Location: login.php");
+   exit;
 
+}
 require "functions.php";
 if(isset($_POST["submit"])){
+  
    if(add($_POST) > 0){
       echo "
       <script>
        alert('data berhasil ditambahkan');
        document.location.href = 'index.php';
       </script>";
-   }else {
+   }
+   else {
       echo "
       <script>
        alert('data gagal ditambahkan');
@@ -30,7 +37,7 @@ if(isset($_POST["submit"])){
 <body>
    <h1>Tambah data mahasiswa</h1>
 
-   <form action="" method="post">
+   <form action="" method="post" enctype="multipart/form-data">
       <ul>
          <li><label for="nama">Nama :</label>
             <input type="text" name="nama" id="nama" required>
@@ -48,7 +55,7 @@ if(isset($_POST["submit"])){
          </li>
          <li>
             <label for="gambar">Gambar :</label>
-            <input type="text" name="gambar" id="gambar" required> 
+            <input type="file" name="gambar" id="gambar" > 
          </li>
          <li>
             <button type="submit" name="submit">Tambah Data</button>

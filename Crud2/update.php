@@ -12,7 +12,8 @@ if(isset($_POST["submit"])){
        alert('data berhasil dirubah');
        document.location.href = 'index.php';
       </script>";
-   }else {
+   }
+   else {
       echo "
       <script>
        alert('data gagal dirubah');
@@ -33,8 +34,10 @@ if(isset($_POST["submit"])){
 <body>
    <h1>Tambah data mahasiswa</h1>
 
-   <form action="" method="post">
+   <form action="" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?= $mhs["id"]; ?>">
+      <input type="hidden" name="gambarLama" value="<?= $mhs["gambar"]; ?>">
+      
       <ul>
          <li><label for="nama">Nama :</label>
             <input type="text" name="nama" id="nama" required
@@ -55,9 +58,9 @@ if(isset($_POST["submit"])){
             value="<?= $mhs["jurusan"];?>"> 
          </li>
          <li>
-            <label for="gambar">Gambar :</label>
-            <input type="text" name="gambar" id="gambar" required
-            value="<?= $mhs["gambar"];?>"> 
+            <label for="gambar">Gambar :</label><br>
+            <img src="img/<?= $mhs['gambar']; ?>" width="120px" ><br>
+            <input type="file" name="gambar" id="gambar"> 
          </li>
          <li>
             <button type="submit" name="submit">Simpan Data</button>
