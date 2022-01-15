@@ -35,9 +35,6 @@ if(isset($_POST["cari"])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="js/jquery-3.6.0.min.js"></script>
-   <script src="js/script.js"></script>
-   <link rel="stylesheet" href="css/style.css">
    <title>Halaman Admin</title>
 </head>
 <body>
@@ -50,8 +47,6 @@ if(isset($_POST["cari"])){
       <input type="text" name="keyword" size="50px" 
       placeholder="Cari" autofocus autocomplete="off" id="keyword">
       <button type="submit" name="cari" id="tombol-cari">Cari</button>
-
-      <img src="../img/loading.gif" alt="" srcset="" class="loader">
    </form>
    <br>
    <!-- navigasi -->
@@ -107,6 +102,7 @@ if(isset($_POST["cari"])){
      
    </table>
    </div>
-  
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script src="js/script.js"></script>
 </body>
 </html>
