@@ -35,16 +35,26 @@ if(isset($_POST["cari"])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css?v2">
    <script src="js/jquery-3.6.0.min.js"></script>
    <script src="js/script.js"></script>
-   <link rel="stylesheet" href="css/style.css">
+   
+   
+
+   <!-- <style>
+      @media print{
+         .logout, .tambah{
+            display : none;
+         }
+      }
+   </style> -->
    <title>Halaman Admin</title>
 </head>
 <body>
 
-   <a href="logout.php">Log Out</a>
-   <h1>Daftar Mahasiswa</h1>
-   <a href="add.php">Tambah data Mahasiswa</a><br><br>
+   <a href="logout.php" class="logout">Log Out</a>
+   <h1 class="title">Daftar Mahasiswa</h1>
+   <a href="add.php" class="tambah">Tambah data Mahasiswa</a><br><br>
 
    <form action="" method="post">
       <input type="text" name="keyword" size="50px" 

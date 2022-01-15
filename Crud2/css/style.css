@@ -6,3 +6,12 @@
    display: none;
 
 }
+@media print{
+   .logout, .tambah{
+      display : none;
+   }
+}
+
+.title{
+   color: blue;
+}
